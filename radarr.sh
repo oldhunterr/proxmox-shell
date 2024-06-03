@@ -110,8 +110,6 @@ build_container
 description
 
 msg_info "Starting Installation of Sonarr and Radarr"
-update_sonarr
-update_radarr
 
 msg_ok "Completed Successfully!\n"
 echo -e "Sonarr should be reachable by going to the following URL:
