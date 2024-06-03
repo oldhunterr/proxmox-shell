@@ -60,23 +60,23 @@ function default_settings() {
 
 function install_sonarr() {
   msg_info "Installing Sonarr"
-  wget -q -O - https://apt.sonarr.tv/pub.key | sudo apt-key add -
-  echo "deb https://apt.sonarr.tv/debian buster main" | sudo tee /etc/apt/sources.list.d/sonarr.list
-  sudo apt update
-  sudo apt install nzbdrone -y
-  sudo systemctl enable sonarr
-  sudo systemctl start sonarr
+  wget -q -O - https://apt.sonarr.tv/pub.key | apt-key add -
+  echo "deb https://apt.sonarr.tv/debian buster main" | tee /etc/apt/sources.list.d/sonarr.list
+  apt update
+  apt install nzbdrone -y
+  systemctl enable sonarr
+  systemctl start sonarr
   msg_ok "Sonarr Installed"
 }
 
 function install_radarr() {
   msg_info "Installing Radarr"
-  wget -q -O - https://apt.sonarr.tv/pub.key | sudo apt-key add -
-  echo "deb https://apt.sonarr.tv/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/radarr.list
-  sudo apt update
-  sudo apt install radarr -y
-  sudo systemctl enable radarr
-  sudo systemctl start radarr
+  wget -q -O - https://apt.sonarr.tv/pub.key | apt-key add -
+  echo "deb https://apt.sonarr.tv/ubuntu bionic main" | tee /etc/apt/sources.list.d/radarr.list
+  apt update
+  apt install radarr -y
+  systemctl enable radarr
+  systemctl start radarr
   msg_ok "Radarr Installed"
 }
 
